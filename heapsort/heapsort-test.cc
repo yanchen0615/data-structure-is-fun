@@ -49,7 +49,7 @@ TestCase getTestCase() {
 bool validate(const std::vector<int> &expected,
               const std::vector<int> &actual) {
   for (int i = 0; i < expected.size(); i++) {
-    if (expected[i] != actual[i]) {
+    if (expected[i] != actual[i + 1]) {
       return false;
     }
   }

@@ -73,13 +73,8 @@ int main(int argc, char **argv) {
   int pass = 0, total = 0;
   for (TestCase testCase = getTestCase(); testCase.initialized;
        testCase = getTestCase(), total++) {
-    for (auto num : testCase.answer) {
-      std::cout << num << ' ';
-    }
-    std::cout << std::endl;
     std::vector<int> cartisonArray = std::vector<int>(
         testCase.array1.size() * testCase.array2.size() + 1, 0);
-    std::cout << cartisonArray.size() << std::endl;
     cartisanProduct(cartisonArray.data(), testCase.array1.data(),
                     testCase.array2.data(), testCase.array1.size());
     heapSort(cartisonArray.data(), cartisonArray.size());
